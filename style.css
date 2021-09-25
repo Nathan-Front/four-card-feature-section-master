@@ -28,54 +28,56 @@ body{
     background:var(--verylight-gray)
 }
 header{
-    margin: 0 30%;
+    margin: 0 26em;
     padding: 0;
     text-align: center;
 }
-header>h1{
+.page-title{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: var(--font-weight2);
     color: var(--verydark-blue);
 }
-header>h1>span,h2{
+.page-title span{
     font-weight: var(--font-weight6);
     color: var(--verydark-blue);
 }
-header>p{
+.title-content{
     font-size: var(--font-size);
     color: var(--verydark-blue);
 }
 .main--container{
-    margin: 3% 10%;
+    margin: 2em 8em;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: center;
     justify-content: center;
-    grid-gap: 8% 3%;
+    grid-gap: 2em;
+    list-style: none;
 }
-.main--container>div{
+.cards{
     margin: 0;
-    padding: 6% 8%;
-    box-shadow: 0 10px 10px var(--grayish-blue);
+    padding: 2em;
+    box-shadow: 0 3px 5px var(--grayish-blue);
     border-radius: 5px;
-    border-top-style: inset;
+    border-top-style: solid;
     border-width: 5px;
 }
-.main--container>div>h2{
+.card-title{
     margin: 0 ;
     padding: 0;
     font-size: 1.4em;
+    font-weight: var(--font-weight6);
 }
-.main--container>div>p{
-    margin: 5% 0 0 0;
+.card-content{
+    margin: 1em 0 0 0;
     padding: 0;
     font-size: .8em;
     color: var(--verydark-blue);
 }
-.main--container>div>img{
+.card-images{
     margin: 7% 0 0 0;
     float: right;
 }
@@ -101,18 +103,18 @@ header>p{
 }
 @media only screen and (max-width:1000px){
     header{
-        margin: 15% 10%;
+        margin: 5em 2em;
     }
-    header>h1{
+    .page-title{
         font-size: 1.5em;
     }
     .main--container{
-        margin: 0 10% 30% 10%;
+        margin: 0 2em 5em 2em;
         grid-template-rows: repeat(4,1fr);
         grid-template-columns:unset;
-        grid-gap: 3%;
+        grid-gap: 2em;
     }
-    .main--container>div>h2{
+    .card-title{
         margin: 0 ;
         padding: 0;
         font-size: 1.4em;
